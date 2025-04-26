@@ -143,6 +143,16 @@ void Project13AudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, ju
     // this code if your algorithm always overwrites all the output channels.
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
+    
+    //TODO: add APVTS
+    //TODO: create audio parameters for all dsp choices
+    //TODO: update DSP here from audio parameters
+    //TODO: save/load settings
+    //TODO: save/load DSP order
+    //TODO: Drag-To-Reorder GUI
+    //TODO: GUI desing for each DSP instance?
+    //TODO: metering
+    //TODO: prepare all DSP
 
     auto newDSPOrder = DSP_Order();
 
